@@ -31,13 +31,47 @@ Use any of the array methods, such as pop(), push(), unshift() and shift()
 
 function redoArray ( arr ){
     newArr = []
-
-    newArr.push(arr.pop())
-    newArr.push(arr.shift())
-    newArr.push(arr[0])
-
+    for (let i = 0; i < arr.length; i++) {
+    
+        switch(arr[i]){
+            case 'dates':
+            newArr.push(arr.pop(arr[i]))
+            break
+            
+            case 'apple':
+            newArr.push(arr.shift(arr[i]))
+            break
+        
+            case 'blueberry':
+            newArr.push(arr[1])
+            break
+    }
+    // newArr.push(arr.pop())
+    // newArr.push(arr.shift())
+    // newArr.push(arr[0])
+    // return newArr
+    }
     return newArr
 }
+
+// function redoArray ( arr ){
+//     let newArr = []
+//     for (let i = 0; i < arr.length; i++){
+//         switch(arr[i]){
+//             case 'dates':
+//                 newArr.push(arr.pop());
+//                 break;
+//             case 'apple':
+//                 newArr.push(arr.shift());
+//                 break;
+//             case 'blueberry':
+//                 newArr.push(arr[0]);
+//                 break;
+//         }
+//     }
+//     return newArr
+// }
+
 
 const yummies = ["apple", "blueberry", "cantaloupe",  "dates"]
 
